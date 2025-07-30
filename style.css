@@ -1,0 +1,100 @@
+/* Background & Layout */
+body {
+  background: #ffe00b;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Headline */
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #151515;
+  letter-spacing: 1px;
+}
+
+/* Password Input */
+input[type="password"] {
+  padding: 14px;
+  width: 90%;
+  max-width: 400px;
+  font-size: 16px;
+  border: 2px solid #151515;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  outline: none;
+  box-shadow: 2px 2px #151515;
+}
+
+/* Strength Text */
+#strength-text {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #151515;
+}
+
+/* Button (your fancy hover effect) */
+.btn {
+  background: #fffcd5;
+  box-shadow: 4px 4px #ffe00b, 9px 9px #151515;
+  color: #151515;
+  border: solid 2px #151515;
+  text-decoration: none;
+  padding: 18px 32px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+  transition: 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  cursor: pointer;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.btn::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background: #151515;
+  z-index: -1;
+  transition: 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.btn:hover::before {
+  width: 100%;
+  left: 0;
+  right: unset;
+}
+.btn:hover {
+  box-shadow: 0 0 #ffe00b, 0 0 #151515;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 22px;
+  }
+  input[type="password"] {
+    width: 100%;
+  }
+}
+
